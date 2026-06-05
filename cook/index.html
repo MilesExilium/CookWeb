@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniBite - Νέα Αγγελία</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-brand">🍽️ UniBite</div>
+    <div class="nav-links">
+        <span id="points-display">⭐ Πόντοι: <strong id="user-points">-</strong></span>
+        <a href="dashboard.html">📋 Dashboard</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Νέα Αγγελία</h1>
+
+    <form id="listing-form">
+
+        <div class="form-group">
+            <label for="title">Τίτλος φαγητού *</label>
+            <input type="text" id="title" placeholder="π.χ. Μουσακάς" required>
+        </div>
+
+        <div class="form-group">
+            <label for="portions">Αριθμός μερίδων *</label>
+            <input type="number" id="portions" min="1" max="20" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pickup-location">Σημείο παραλαβής *</label>
+            <input type="text" id="pickup-location" placeholder="π.χ. Εστία Β, Δωμάτιο 214" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pickup-time">Ώρα παραλαβής *</label>
+            <input type="time" id="pickup-time" required>
+        </div>
+
+        <div class="form-group">
+            <label for="notes">Σημειώσεις</label>
+            <textarea id="notes" rows="3" placeholder="π.χ. Χορτοφαγικό, χωρίς γλουτένη..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="photo">Φωτογραφία (προαιρετικά)</label>
+            <input type="text" id="photo" placeholder="URL φωτογραφίας">
+        </div>
+
+        <div class="form-group">
+            <label>Αλλεργιογόνα</label>
+            <div class="allergens-grid">
+                <label><input type="checkbox" value="Γλουτένη"> Γλουτένη</label>
+                <label><input type="checkbox" value="Γαλακτοκομικά"> Γαλακτοκομικά</label>
+                <label><input type="checkbox" value="Αυγά"> Αυγά</label>
+                <label><input type="checkbox" value="Ξηροί καρποί"> Ξηροί καρποί</label>
+                <label><input type="checkbox" value="Φιστίκια"> Φιστίκια</label>
+                <label><input type="checkbox" value="Θαλασσινά"> Θαλασσινά</label>
+                <label><input type="checkbox" value="Ψάρι"> Ψάρι</label>
+                <label><input type="checkbox" value="Σόγια"> Σόγια</label>
+                <label><input type="checkbox" value="Σέλινο"> Σέλινο</label>
+                <label><input type="checkbox" value="Μουστάρδα"> Μουστάρδα</label>
+                <label><input type="checkbox" value="Σουσάμι"> Σουσάμι</label>
+                <label><input type="checkbox" value="Θειώδη"> Θειώδη</label>
+                <label><input type="checkbox" value="Λούπινα"> Λούπινα</label>
+                <label><input type="checkbox" value="Μαλάκια"> Μαλάκια</label>
+            </div>
+        </div>
+
+        <div id="form-message" class="message hidden"></div>
+
+        <button type="submit" class="btn-primary">✅ Δημοσίευση Αγγελίας</button>
+
+    </form>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
